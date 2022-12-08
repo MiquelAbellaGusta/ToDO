@@ -1,0 +1,13 @@
+/* body {
+    background-color: grey;
+} */
+
+body .container {
+    background-color: white;
+}
+
+.container header form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
