@@ -12,37 +12,76 @@
 
 <body>
     <div class="container mt-5">
-        <header>
-            <form class="row row-cols-lg-auto g-3 ">
-                <div class="col-12">
+        <header id="top">
+            <form class="uno row row-cols-lg-auto g-3 ">
+                <div class="tarea col-12">
 
-                    <input type="text" class="form-control" id="inputtask" placeholder="Type a task to do">
+                    <input type="text" class="form-control" id="inputTask" placeholder="Type a task to do">
 
                 </div>
 
-                <div class="col-12">
+                <div class="prioridad col-12">
 
                     <select class="form-select" id="priority">
                         <option selected>Choose the priority</option>
-                        <option value="1">Urgent</option>
-                        <option value="2">Daily</option>
-                        <option value="3">Monthly</option>
+                        <option class="urgente" value="urgent">Urgent</option>
+                        <option class="mensual" value="monthly">Monthly</option>
+                        <option class="diario" value="daily">Daily</option>
+
                     </select>
                 </div>
 
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button id="btn" type="submit" class="btn btn-primary">Add</button>
                 </div>
             </form>
+            <div class="mensaje"></div>
+
+            <div class="dos row row-cols-lg-auto g-3 mt-3 ">
+
+                <div class="filtro col-12">
+
+                    <select class="form-select" id="filter">
+                        <option selected>Filter by priority</option>
+                        <option class="urgente" value="urgent">Urgent</option>
+                        <option class="mensual" value="monthly">Monthly</option>
+                        <option class="diario" value="daily">Daily</option>
+
+                    </select>
+                </div>
+
+                <div class="buscador col-12">
+
+                    <input type="text" class="form-control" id="search" placeholder="Type a task to search">
+                </div>
+            </div>
+
+
+
+
         </header>
 
+        <main>
+            <h1>Task List</h1>
+            <section>
+                <ul id="task" class="list-group">
 
 
+                </ul>
+
+            </section>
+
+        </main>
+
+        <div id="anchor">
+            <a href="#top"><i class="fas fa-caret-square-up"></i></a>
+        </div>
 
     </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--  <script src="./js/Task.js"></script> -->
     <script src="./js/main.js"></script>
 </body>
 

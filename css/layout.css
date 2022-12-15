@@ -1,13 +1,118 @@
-/* body {
-    background-color: grey;
-} */
+html {
+
+    scroll-behavior: smooth;
+}
+
 
 body .container {
     background-color: white;
+
 }
 
-.container header form {
+/*inicio header*/
+header {
+    padding-bottom: 20px;
+    border-bottom: 2px solid grey;
+}
+
+.container header .uno {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+
+}
+
+.uno .tarea {
+    width: 45%;
+
+}
+
+.uno .prioridad {
+    width: 45%;
+}
+
+.urgente {
+    background-color: #f8d7da;
+    color: #842029;
+
+}
+
+.mensual {
+    color: #664d03;
+    background-color: #fff3cd;
+}
+
+.diario {
+    color: #0f5132;
+    background-color: #d1e7dd;
+}
+
+.uno button {
+    padding: 6px 30px;
+
+}
+
+.container header .dos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.dos .filtro {
+    width: 45%;
+}
+
+.dos .buscador {
+    width: 45%;
+    margin-left: 2px;
+
+}
+
+/*fin header*/
+
+/* inicio de main */
+
+main h1 {
+    display: none;
+}
+
+main section {
+    margin-top: 5px;
+    width: 100%;
+}
+
+main section ul {
+    padding-left: 0px;
+}
+
+section li {
+    box-sizing: border-box;
+    position: relative;
+}
+
+section li i {
+    box-sizing: content-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .8rem 1rem;
+    cursor: pointer;
+    opacity: .5;
+}
+
+section li i:hover {
+    opacity: 1;
+}
+
+/*fin de main*/
+#anchor {
+    position: fixed;
+    bottom: 1.375rem;
+    right: 3rem;
+}
+
+#anchor a {
+    font-size: 200%;
 }
