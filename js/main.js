@@ -75,8 +75,16 @@ const mensaje = document.querySelector('#mensaje');
 
 let id = 0;
 
-btn.addEventListener('click', getTask);
+btn.addEventListener('click', duplicado);
+function duplicado() {
+    let localList = localStorage.getItem("taskList");
+    let list = JSON.parse(localList);
+    let element = inputTask.value;
+    let indice = list.findIndex(tareas => tareas.task === element)
+    if (indice === -1) { getTask() }
+    else { Mensaje5(mensaje) };
 
+}
 function getTask() {
     let prio = prioridad.value;
     let tar = inputTask.value;
@@ -97,6 +105,7 @@ function getTask() {
         let localList = localStorage.getItem("taskList");
         let list = JSON.parse(localList);
         PrintAllTask(list, taskDom);
+        Mensaje3(mensaje);
 
         inputTask.value = "";
     }
